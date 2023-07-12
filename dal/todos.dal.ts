@@ -6,10 +6,6 @@ export class TodoDal {
     return TodoMongoModel.find();
   }
 
-  async getById(id: string) {
-    return TodoMongoModel.findById(id);
-  }
-
   async create(todo: Omit<Todo, '_id'>) {
     return TodoMongoModel.create(todo);
   }
