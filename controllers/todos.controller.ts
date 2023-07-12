@@ -13,7 +13,6 @@ export class TodoController {
       const todos = await this.todoBl.getAll();
       res.json(todos);
     } catch (error) {
-      console.log(error);
       res.status(500).json({ error: 'Internal server error' });
     }
   }
@@ -38,7 +37,6 @@ export class TodoController {
       const { title, deadline } = req.body;
 
       const todo = await this.todoBl.create({ title, deadline });
-      console.log('todo:', todo);
 
       res.status(201).json(todo);
     } catch (error) {
@@ -52,7 +50,6 @@ export class TodoController {
       const { title, deadline } = req.body;
 
       const updatedTodo = await this.todoBl.updateById({ _id: id, title, deadline });
-      console.log('updatedTodo:', updatedTodo);
 
       if (!updatedTodo) {
         res.status(404).json({ error: 'Todo not found' });
@@ -68,7 +65,6 @@ export class TodoController {
     try {
       const { id } = req.params;
       const deletedTodo = await this.todoBl.delete(id);
-      console.log('deletedTodo:', deletedTodo);
 
       if (!deletedTodo) {
         res.status(404).json({ error: 'Todo not found' });
