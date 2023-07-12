@@ -7,8 +7,6 @@ const todoController = new TodoController();
 
 router.get('/', (req, res) => todoController.getAllTodos(req, res));
 
-router.get('/:id', (req, res) => todoController.getTodoById(req, res));
-
 router.post('/', (req, res) => todoController.createTodo(req, res));
 
 router.put('/:id', (req, res) => todoController.updateTodo(req, res));

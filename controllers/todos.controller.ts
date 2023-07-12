@@ -17,21 +17,6 @@ export class TodoController {
     }
   }
 
-  async getTodoById(req: Request, res: Response): Promise<void> {
-    try {
-      const { id } = req.params;
-      const todo = await this.todoBl.getById(id);
-
-      if (!todo) {
-        res.status(404).json({ error: 'Todo not found' });
-      } else {
-        res.json(todo);
-      }
-    } catch (error) {
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  }
-
   async createTodo(req: Request, res: Response): Promise<void> {
     try {
       const { title, deadline } = req.body;

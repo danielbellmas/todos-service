@@ -14,7 +14,6 @@ It's built using Node.js and MongoDB.
 **todos-service** provides the following endpoints:
 
 - `GET /todos` - Retrieves all todos.
-- `GET /todos/:id` - Retrieves a specific todo by ID.
 - `POST /todos` - Creates a new todo.
 - `PUT /todos/:id` - Updates a todo by ID.
 - `DELETE /todos/:id` - Deletes a todo by ID.

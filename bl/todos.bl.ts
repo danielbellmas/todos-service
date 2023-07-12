@@ -12,10 +12,6 @@ export class TodoBl {
     return this.todoDal.getAll();
   }
 
-  async getById(id: string) {
-    return this.todoDal.getById(id);
-  }
-
   async create(todo: Omit<Todo, '_id'>) {
     return this.todoDal.create(todo);
   }
