@@ -3,8 +3,11 @@ import type { ConnectOptions } from 'mongoose';
 import mongoose from 'mongoose';
 import todosRoutes from './routes/todos.routes';
 import config from './config';
+import cors from 'cors';
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
