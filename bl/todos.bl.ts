@@ -16,8 +16,8 @@ export class TodoBl {
     return this.todoDal.create(todo);
   }
 
-  async updateById(newTodo: Todo) {
-    return this.todoDal.updateById(newTodo);
+  async update(newTodo: Todo) {
+    return this.todoDal.update(newTodo);
   }
 
   async delete(id: string) {

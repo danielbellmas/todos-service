@@ -10,7 +10,7 @@ export class TodoDal {
     return TodoMongoModel.create(todo);
   }
 
-  async updateById({ _id, title, deadline }: Todo): Promise<Todo | null> {
+  async update({ _id, title, deadline }: Todo): Promise<Todo | null> {
     return TodoMongoModel.findByIdAndUpdate(_id, { title, deadline }, { new: true });
   }
 

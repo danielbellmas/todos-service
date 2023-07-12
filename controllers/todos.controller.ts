@@ -34,7 +34,7 @@ export class TodoController {
       const { id } = req.params;
       const { title, deadline } = req.body;
 
-      const updatedTodo = await this.todoBl.updateById({ _id: id, title, deadline });
+      const updatedTodo = await this.todoBl.update({ _id: id, title, deadline });
 
       if (!updatedTodo) {
         res.status(404).json({ error: 'Todo not found' });
