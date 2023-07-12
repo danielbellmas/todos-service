@@ -5,6 +5,10 @@
 The `todos-service` handles CRUD operations for managing todos.
 It's built using Node.js and MongoDB.
 
+## Assumption
+
+1. There is a single user for the application, and no authentication is required.
+
 ## System Architecture
 
 **todos-service** provides the following endpoints:
