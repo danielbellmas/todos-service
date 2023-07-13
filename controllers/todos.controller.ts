@@ -11,6 +11,7 @@ export class TodoController {
   async getAllTodos(req: Request, res: Response): Promise<void> {
     try {
       const todos = await this.todoBl.getAll();
+
       res.json(todos);
     } catch (error) {
       res.status(500).json({ error: 'Internal server error' });
